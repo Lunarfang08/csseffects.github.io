@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSSEFFECTS</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Anime Fanpage</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://images3.alphacoders.com/132/1324832.png"); /* Replace with your anime background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+          }
+
+          header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+          }
+
+          h1 {
+            color: #fff;
+          }
+
+          .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.9s ease, background-color 0.3s ease;
+            animation: pulse 2s infinite alternate;
+          }
+
+          .button:hover {
+            background-color: #ff4500;
+            animation: none; /* Disable the pulse animation on hover */
+            transform: scale(1.5); /* Add a scale effect on hover */
+          }
+
+          @keyframes pulse {
+            0% {
+              transform: scale(1);
+            }
+            100% {
+              transform: scale(1.1);
+            }
+          }
+
+          .container {
+            text-align: center;
+            padding: 50px;
+          }
+
+          .anime-character {
+            width: 150px;
+            animation: float 2s infinite;
+          }
+
+          @keyframes float {
+            0%,
+            100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-10px);
+            }
+          }
+          .glitch-text {
+            font-size: 36px;
+            color: #ea09ff;
+            position: relative;
+            animation: glitch 2s infinite, led 1s alternate infinite;
+          }
+
+          @keyframes glitch {
+            0%,
+            100% {
+              transform: translate(0);
+              opacity: 1;
+              clip: rect(0, auto, 0, auto);
+            }
+            2%,
+            98% {
+              transform: translate(2px, -2px);
+              opacity: 0.8;
+              clip: rect(45px, auto, 28px, auto);
+            }
+            4%,
+            96% {
+              transform: translate(-2px, 2px);
+              opacity: 0.8;
+              clip: rect(25px, auto, 18px, auto);
+            }
+          }
+
+          @keyframes led {
+            0% {
+              text-shadow: 0 0 5px #ea09ff, 0 0 10px #4000ff, 0 0 20px #ea09ff;
+            }
+            100% {
+              text-shadow: 0 0 10px #ea09ff, 0 0 20px #db1919, 0 0 30px #ea09ff;
+            }
+          }
+          .question {
+            color: white;
+          }
+          #submit-button {
+            padding: 5px; /* Increase padding for width and height */
+            font-size: 17px; /* Increase font size */
+            background-color: #ff6600; /* Background color */
+            color: #fff; /* Text color */
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+            justify-content: center;
+            position: relative;
+            top: 12px;
+        }
+
+        #submit-button:hover {
+            background-color: #ff4500; /* Hover background color */
+            transform: scale(1.1); /* Scale effect on hover */
+        }
+
+        </style>
+      </head>
+      <body>
+        <header>
+          <h1>Ohiooo Gojo sensei here!!</h1>
+        </header>
+
+        <div class="container">
+          <img
+            class="anime-character"
+            src="https://e1.pxfuel.com/desktop-wallpaper/300/887/desktop-wallpaper-gojo-satoru-gojo-funny.jpg"
+            alt="Ohioo Gojo sensei here!!"
+          />
+          <h1 class="glitch-text">Welcome to our anime fanpage!</h1>
+          <a
+            href="https://weebquiz.com/quizqu/who-became-the-host-of-ryomen-sukuna/"
+            target="_blank"
+          >
+            <button class="button">Take Quiz</button>
+          </a>
+          <div class="question">
+            <h2>
+              Question 1: Is Naruto the main character in the anime series
+              "Naruto"?
+            </h2>
+            <form>
+              <input type="radio" name="q1" value="true" id="q1_true" />
+              <label for="q1_true">True</label><br />
+              <input type="radio" name="q1" value="false" id="q1_false" />
+              <label for="q1_false">False</label><br />
+            </form>
+
+            <h2>
+              Question 2: The "One Piece" anime is based on a manga series
+              written by Eiichiro Oda."?
+            </h2>
+            <form>
+              <input type="radio" name="q2" value="true" id="q2_true" />
+              <label for="q2_true">True</label><br />
+              <input type="radio" name="q2" value="false" id="q2_false" />
+              <label for="q2_false">False</label><br />
+            </form>
+
+            <h2>
+              Question 3: Ichigo Kurosaki, the main character in "Bleach," gains
+              his soul reaper powers by accident."?
+            </h2>
+            <form>
+              <input type="radio" name="q3" value="true" id="q3_true" />
+              <label for="q3_true">True</label><br />
+              <input type="radio" name="q3" value="false" id="q3_false" />
+              <label for="q3_false">False</label><br />
+            </form>
+
+            <h2>
+              Question 4: "Gintama" is a historical drama anime set in feudal
+              Japan."?
+            </h2>
+            <form>
+              <input type="radio" name="q4" value="true" id="q4_true" />
+              <label for="q4_true">True</label><br />
+              <input type="radio" name="q4" value="false" id="q4_false" />
+              <label for="q4_false">False</label><br />
+            </form>
+            <button id="submit-button">Submit</button>
+          </div>
+        </div>
+
+        <script>
+          // JavaScript for handling quiz submission and scoring
+          document
+            .getElementById("submit-button")
+            .addEventListener("click", function () {
+              
+              const answers = {
+                q1: document.querySelector('input[name="q1"]:checked').value,
+                q2: document.querySelector('input[name="q2"]:checked').value,
+                q3: document.querySelector('input[name="q3"]:checked').value,
+                q4: document.querySelector('input[name="q4"]:checked').value,
+              };
+
+              // Check the answers and calculate the score
+              const score = calculateScore(answers);
+
+              // Display the result
+              if (score==4)
+              {
+                alert(`SUGOIIIIII!! Your 1 Grade now`);
+                alert(`4/4`);
+              }
+              else if (score==3)
+              {
+                alert(`hmmm you 4th grade !!`);
+                alert(`3/4`);
+              }
+              else if (score==2)
+              {
+                alert(`yowaiimonn hehe`);
+                alert(`2/4`);
+              }
+              else if (score==1)
+              {
+                alert(`reallyyyyyyyyy!!`);
+                alert(`1/4`);
+              }
+              else{
+                alert (`You suck! Try again.`);
+                alert(`0/4`);
+              }
+            });
+
+          function calculateScore(answers) {
+            let score = 0;
+
+            // Check the answers and calculate the score
+            if (answers.q1 === "true") {
+              score += 1;
+            }
+            if (answers.q2 === "true") {
+              score += 1;
+            }
+            if (answers.q3 === "true") {
+              score += 1;
+            }
+            if (answers.q4 === "false") {
+              score += 1;
+            }
+            // Add more checks for other questions
+
+            return score;
+          }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
